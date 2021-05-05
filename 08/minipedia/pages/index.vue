@@ -55,29 +55,10 @@
       was sent from the Ghetto to the Treblinka extermination camp by the Nazis, during the Grossaktion
       Warschau of 1942.</p>
 
-    <div class="toc">
-      <div class="box">
-        <h2 class="no-underline"> Contents </h2>
-        <ol>
-          <li><a href="#biography">Biography</a></li>
-          <li><a href="#writings">Writings</a></li>
-          <li><a href="#legacy-and-remembrance">Legacy and remembrance</a></li>
-          <li><a href="#list-of-selected-works">List of selected works</a></li>
-          <li><a href="#in-popular-culture">In popular culture</a></li>
-          <li><a href="#notes">Notes</a></li>
-          <li><a href="#references">References</a></li>
-          <li><a href="#further-reading">Further reading</a></li>
-        </ol>
-      </div>
-    </div>
-
-    <ContentSection :title="biography.title" :content="biography.content" />
-
-    <ContentSection :title="biography.title" :content="biography.content" />
-
-    <ContentSection :title="biography.title" :content="biography.content" />
-
-    <ContentSection :title="biography.title" :content="biography.content" />
+    <TableOfContents :content="content" />
+    
+    <ContentSection 
+    v-for="section in content" :title="section.title" :content="section.content" />
 
     <h2 id="references">References</h2>
     <ol class="references">
@@ -232,8 +213,8 @@
   export default {
     layout: 'default',
     computed: {
-      biography() {
-        return {
+      content() {
+        return [{
           title: 'Biography',
           content: [
             `Korczak was born in Warsaw in 1878. He was unsure of his birth date, which he attributed to his
@@ -287,7 +268,18 @@
     after a brief stint in Łódź was assigned to Warsaw. After the wars, he continued his practice in
     Warsaw.`
           ]
+        },
+        {
+          title: 'Childhood',
+          content: ['Hello world']
+         
+        },
+        {
+          title: 'Writings',
+          content: ['Hello world2']
+         
         }
+        ]
       }
     }
   }

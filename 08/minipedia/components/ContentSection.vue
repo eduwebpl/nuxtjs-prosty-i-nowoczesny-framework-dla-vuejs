@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 id="biography">{{ $props.title }}</h2>
+    <h2 :id="headingId">{{ $props.title }}</h2>
     <p v-for="paragraph in content">
      {{ paragraph }}
     </p>
@@ -19,6 +19,11 @@ export default {
     required: true,
    }
  },
+ computed: {
+  headingId() {
+   return this.$props.title.replace(' ', '-').toLowerCase();
+  }
+ }
 }
 </script>
 
