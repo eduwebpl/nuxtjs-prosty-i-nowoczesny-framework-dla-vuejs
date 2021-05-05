@@ -2,7 +2,7 @@ export default {
   dev: process.env.NODE_ENV !== 'production',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'minipedia',
+    title: 'Minipedia',
     htmlAttrs: {
       lang: 'en'
     },
@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
   server: {
@@ -33,8 +33,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
