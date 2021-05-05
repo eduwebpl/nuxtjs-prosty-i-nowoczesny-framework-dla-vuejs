@@ -4,7 +4,7 @@
       Janusz Korczak
     </h1>
 
-    <span class="notice">From Wikipedia, the free encyclopedia</span>
+    <span v-tooltip="'Please support the original source of the data'" class="notice">From Wikipedia, the free encyclopedia</span>
     
     
     <FullInfoBox :content="fullInfo" />
