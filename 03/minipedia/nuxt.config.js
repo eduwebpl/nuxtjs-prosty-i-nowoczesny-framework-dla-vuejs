@@ -35,9 +35,14 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-basic-auth-module'
   ],
-
+  basic: {
+    name: process.env.USERNAME,
+    pass: process.env.PASSWORD,
+    enabled: process.env.BASIC_ENABLED === 'true' // require boolean value(nullable)
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 

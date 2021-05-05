@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        Please log in
+        Welcome {{ username }}
       </h1>
       <div class="links">
         <a
@@ -28,7 +28,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+ computed: {
+  username() {
+   return process.env.NUXT_ENV_USERNAME;
+  }
+ }
+}
 </script>
 
 <style>
