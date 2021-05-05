@@ -5,9 +5,10 @@
     </h1>
 
     <span class="notice">From Wikipedia, the free encyclopedia</span>
-
-
-    <table class="box full-bio">
+    
+    
+    <FullInfoBox :content="fullInfo" />
+    <!-- <table class="box full-bio">
       <tr>
         <th colspan="2">
           Janusz Korczak
@@ -45,8 +46,7 @@
         <td>Children's author, humanitarian, pediatrician, child pedagogue and defender of children's rights
         </td>
       </tr>
-    </table>
-
+    </table>-->
 
     <p>Janusz Korczak, the pen name of Henryk Goldszmit (22 July 1878 or 1879 – 7 August 1942), was a
       Polish Jewish educator, children's author and pedagogue known as Pan Doktor ("Mr. Doctor") or Stary
@@ -217,6 +217,15 @@
   export default {
     layout: 'default',
     computed: {
+      fullInfo() {
+        return {
+          "Profile photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Janusz_Korczak.PNG/220px-Janusz_Korczak.PNG",
+          "Born ": "Henryk Goldszmit 22 July 1878",
+          "Died": `c. 7 August 1942 (aged 64)
+        Treblinka extermination camp, German-occupied Poland`,
+        "Occupation": [`Children's author`, `humanitarian`, `pediatrician`, `child pedagogue and defender of children's rights`]
+        };
+      },
       content() {
         return [{
           title: 'Biography',
