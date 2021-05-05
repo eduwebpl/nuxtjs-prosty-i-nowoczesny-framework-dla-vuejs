@@ -1,4 +1,5 @@
 export default {
+  dev: process.env.NODE_ENV !== 'production',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'minipedia',
@@ -14,9 +15,13 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  server: {
+   port: 8000,
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+   
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
