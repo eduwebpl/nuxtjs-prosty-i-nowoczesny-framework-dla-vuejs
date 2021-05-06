@@ -1,5 +1,9 @@
 export default {
   dev: process.env.NODE_ENV !== 'production',
+  target: 'static',
+  generate: {
+   routes: ['/wiki/Janusz%20Korczak', '/wiki/Batman', '/wiki/Spain']
+  },
   serverMiddleware: [
    {
      path: '/api',
