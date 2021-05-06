@@ -62,3 +62,9 @@
   
 
 </script>
+
+<style>
+.full-bio img {
+ max-width: 100%;
+}
+</style>

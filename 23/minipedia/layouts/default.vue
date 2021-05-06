@@ -3,7 +3,7 @@
     <nav class="side-navigation">
       <div class="logo">
         <a href="/">
-          <img src="logo2.png" alt="">
+          <img src="/logo2.png" alt="">
           Minipedia
         </a>
       </div>
