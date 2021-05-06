@@ -5,6 +5,6 @@ import Wiki from './routes/wiki';
 const app = Express();
 
 app.use(Ping);
-app.use(Wiki);
+app.use('/wiki/', Wiki);
 
 export default app;
