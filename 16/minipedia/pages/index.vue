@@ -1,5 +1,6 @@
 <template>
   <article class="content">
+    {{ $store.state.exampleState }}
     <h1>
       Janusz Korczak
     </h1>
@@ -8,46 +9,7 @@
     
     
     <FullInfoBox :content="fullInfo" />
-    <!-- <table class="box full-bio">
-      <tr>
-        <th colspan="2">
-          Janusz Korczak
-        </th>
-      </tr>
-
-      <tr>
-        <td colspan="2">
-          <figure>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Janusz_Korczak.PNG/220px-Janusz_Korczak.PNG">
-            <figcaption>
-              Janusz Korczak, photographed c. 1930
-            </figcaption>
-          </figure>
-        </td>
-      </tr>
-
-      <tr>
-        <td>Born</td>
-        <td>Henryk Goldszmit
-          22 July 1878</td>
-      </tr>
-      <tr>
-        <td>Died</td>
-        <td>c. 7 August 1942 (aged 64)
-          Treblinka extermination camp, German-occupied Poland</td>
-      </tr>
-      <tr>
-        <td>Country (nationality)</td>
-        <td>Nationality</td>
-      </tr>
-      <tr>
-        <td>Occupation</td>
-        <td>Children's author, humanitarian, pediatrician, child pedagogue and defender of children's rights
-        </td>
-      </tr>
-    </table>-->
-
+    
     <p>Janusz Korczak, the pen name of Henryk Goldszmit (22 July 1878 or 1879 – 7 August 1942), was a
       Polish Jewish educator, children's author and pedagogue known as Pan Doktor ("Mr. Doctor") or Stary
       Doktor ("Old Doctor"). After spending many years working as a principal of an orphanage in Warsaw, he
@@ -214,8 +176,18 @@
 </template>
 
 <script>
+ import { mapMutations } from 'vuex';
+
   export default {
     layout: 'default',
+    methods: {
+      ...mapMutations({
+       rename: 'rename'
+      }),
+    },
+    mounted() {
+     this.rename('modified state');
+    },
     computed: {
       fullInfo() {
         return {
