@@ -8,12 +8,7 @@
     
     <FullInfoBox :content="$store.state.fullInfo.general" />
     
-    <p>Janusz Korczak, the pen name of Henryk Goldszmit (22 July 1878 or 1879 – 7 August 1942), was a
-      Polish Jewish educator, children's author and pedagogue known as Pan Doktor ("Mr. Doctor") or Stary
-      Doktor ("Old Doctor"). After spending many years working as a principal of an orphanage in Warsaw, he
-      refused sanctuary repeatedly and stayed with his orphans when the entire population of the institution
-      was sent from the Ghetto to the Treblinka extermination camp by the Nazis, during the Grossaktion
-      Warschau of 1942.</p>
+    <p>{{ $store.state.summary }} </p>
 
     <TableOfContents :content="$store.state.content" />
     

@@ -5,9 +5,9 @@
       <td colspan="2">
         <figure>
           <img
-            :src="mainImage">
+            :src="mainImage" alt="Main image for the query">
           <figcaption>
-            To be filled
+            Main image representing 
           </figcaption>
         </figure>
       </td>
@@ -15,13 +15,14 @@
 
 
     <tr v-for="detail in textDetails">
-      <td>{{ detail[0] }} </td>
+      <td>{{ convertToStartCase(detail[0]) }} </td>
       <td>{{ renderOption(detail[1]) }} </td>
     </tr>
   </table>
   </div>
 </template>
 <script>
+  import * as _ from 'lodash'
   export default {
     props: {
       content: {
@@ -43,19 +44,13 @@
       });
      },
      mainImage() {
-      const firstImageBasedOnValue = this.details.filter(detail => {
-       const detailValue = detail[1];
-       
-       if (typeof detailValue !== 'string') {
-         return false;
-        }
-        return detailValue.includes('.PNG')
-      })[0];
-      
-      return firstImageBasedOnValue[1];
+      return this.$store.state.mainImage;
      }
     },
     methods: {
+     convertToStartCase(string) {
+      return _.startCase(string);
+     },
      renderOption(option) {
       if (Array.isArray(option)) {
        return option.join(', ');
