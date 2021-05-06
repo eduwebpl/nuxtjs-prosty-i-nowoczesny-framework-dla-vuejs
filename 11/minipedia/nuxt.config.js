@@ -14,7 +14,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
-  },
+  }, 
   server: {
    port: 8000,
   },
@@ -36,6 +36,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+   '~/modules/envalid.js'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

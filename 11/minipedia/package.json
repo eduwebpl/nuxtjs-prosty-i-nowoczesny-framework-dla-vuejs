@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
     "core-js": "^3.9.1",
+    "envalid": "^7.1.0",
     "nuxt": "^2.15.3",
     "nuxt-basic-auth-module": "^1.4.0",
     "v-tooltip": "^2.1.3"
