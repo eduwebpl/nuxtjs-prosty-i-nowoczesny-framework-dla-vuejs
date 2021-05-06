@@ -36,12 +36,19 @@
      textDetails() {
       return this.details.filter(detail => {
         const detailValue = detail[1];
+        if (typeof detailValue !== 'string') {
+         return false;
+        }
         return !detailValue.includes('.PNG')
       });
      },
      mainImage() {
       const firstImageBasedOnValue = this.details.filter(detail => {
        const detailValue = detail[1];
+       
+       if (typeof detailValue !== 'string') {
+         return false;
+        }
         return detailValue.includes('.PNG')
       })[0];
       

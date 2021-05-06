@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 :id="headingId">{{ $props.title }}</h2>
-    <p v-for="paragraph in content">
+    <p v-for="paragraph in contentAsAnArray">
      {{ paragraph }}
     </p>
   </div>
@@ -15,11 +15,14 @@ export default {
     required: true,
    },
    content: {
-    type: Array,
+    type: String,
     required: true,
    }
  },
  computed: {
+  contentAsAnArray() {
+   return this.$props.content.split('\n\n');
+  },
   headingId() {
    return this.$props.title.replace(' ', '-').toLowerCase();
   }
