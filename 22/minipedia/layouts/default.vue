@@ -211,6 +211,7 @@
    background: white;
    padding: 1rem;
    border: 0.1rem solid var(--light-blue);
+   background: white;
   }
 
   a {
