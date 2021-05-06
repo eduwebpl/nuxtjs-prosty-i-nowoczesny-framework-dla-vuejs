@@ -57,7 +57,9 @@ export default {
     enabled: process.env.BASIC_ENABLED === 'true' // require boolean value(nullable)
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+   baseURL: 'http://localhost:8000',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

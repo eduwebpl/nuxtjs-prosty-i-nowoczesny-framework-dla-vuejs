@@ -1,6 +1,6 @@
 <template>
   <article class="content">
-    {{ $store.state.exampleState }}
+    {{ fromAsyncData }}
     <h1>
       Janusz Korczak
     </h1>
@@ -187,6 +187,14 @@
     },
     mounted() {
      this.rename('modified state');
+    },
+    async asyncData(config) {
+     const value = config.store.state.exampleState;
+     const $axios = config.$axios;
+     
+     return {
+      fromAsyncData: await $axios.$get('/api/wiki/content/page/Janusz%20Korczak'),
+     }
     },
     computed: {
       fullInfo() {
