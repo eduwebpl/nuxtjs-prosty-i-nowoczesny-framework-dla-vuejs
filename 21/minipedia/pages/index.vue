@@ -3,7 +3,7 @@
     <h1>
       Janusz Korczak
     </h1>
-
+ 
     <span class="notice">From Wikipedia, the free encyclopedia</span>
     
     <FullInfoBox :content="$store.state.fullInfo.general" />

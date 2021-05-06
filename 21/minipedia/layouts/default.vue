@@ -61,14 +61,10 @@
     <header class="banner">
       <ul>
         <li>
-          <a href="#create-account">
-            Create account
-          </a>
+          <NuxtLink to="/register">Register</NuxtLink>
         </li>
         <li>
-          <a href="#login">
-            Log in
-          </a>
+          <NuxtLink to="/please-login">Login</NuxtLink>
         </li>
       </ul>
 
