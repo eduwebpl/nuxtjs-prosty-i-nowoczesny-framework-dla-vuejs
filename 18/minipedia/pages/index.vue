@@ -1,6 +1,10 @@
 <template>
   <article class="content">
-    {{ fromAsyncData }}
+     {{ $store.state.fullInfo }}
+     {{ $store.state.content }}
+     {{ $store.state.summary }}
+     {{ $store.state.rawImages }}
+     {{ $store.state.mainImage }}
     <h1>
       Janusz Korczak
     </h1>
@@ -180,22 +184,7 @@
 
   export default {
     layout: 'default',
-    methods: {
-      ...mapMutations({
-       rename: 'rename'
-      }),
-    },
-    mounted() {
-     this.rename('modified state');
-    },
-    async asyncData(config) {
-     const value = config.store.state.exampleState;
-     const $axios = config.$axios;
-     
-     return {
-      fromAsyncData: await $axios.$get('/api/wiki/content/page/Janusz%20Korczak'),
-     }
-    },
+    middleware: ['wiki-routing'],
     computed: {
       fullInfo() {
         return {
