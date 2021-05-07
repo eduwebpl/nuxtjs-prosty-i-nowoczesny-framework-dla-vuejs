@@ -4,26 +4,30 @@ export const state = () => ({
  summary: null,
  rawImages: null,
  mainImage: null,
+ originalUrl: null,
  langlinks: [],
 })
 
 export const mutations = {
- setFullInfo (state, text) {
-   state.fullInfo = text
+ setFullInfo (state, fullInfo) {
+   state.fullInfo = fullInfo
  },
- setContent (state, text) {
-   state.content = text
+ setContent (state, content) {
+   state.content = content
  },
- setSummary (state, text) {
-   state.summary = text
+ setSummary (state, summary) {
+   state.summary = summary
  },
- setRawImages (state, text) {
-   state.rawImages = text
+ setRawImages (state, rawImages) {
+   state.rawImages = rawImages
  },
- setMainImage (state, text) {
-   state.mainImage = text
+ setMainImage (state, mainImage) {
+   state.mainImage = mainImage
  },
- setLangLinks (state, text) {
-  state.langlinks = text
+ setLangLinks (state, langLinks) {
+  state.langlinks = langLinks
+ },
+ setOriginalUrl(state, url) {
+  state.originalUrl = url;
  }
 } 
