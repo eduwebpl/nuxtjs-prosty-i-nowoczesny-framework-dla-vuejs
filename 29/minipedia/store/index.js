@@ -4,7 +4,7 @@ export const state = () => ({
  summary: null,
  rawImages: null,
  mainImage: null,
- langlinks: null,
+ langlinks: [],
 })
 
 export const mutations = {

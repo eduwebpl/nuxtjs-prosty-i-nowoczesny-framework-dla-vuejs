@@ -13,6 +13,7 @@ export default function () {
    cleanEnv(process.env, {
      USERNAME: str(),
      PASSWORD: str(),
+     BOT_USER_AGENT: str(),
      BASIC_ENABLED: bool()
    })
   }

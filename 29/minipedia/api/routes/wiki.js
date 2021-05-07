@@ -2,24 +2,17 @@ import { Router } from 'express';
 import WikiJs from 'wikijs';
 
 const router = Router();
-const Wiki = WikiJs({
- apiUrl: 'https://en.wikipedia.org/w/api.php',
- headers: { 'User-Agent': 'api-test (https://api-test; my@email) wiki.js'}
-});
 
-router.get('/info/page/:id/property/:property', async (req, res) => {
- const id = req.params.id; 
- const property = req.params.property;
+router.get('/content/page/:id/lang/:lang', async (req, res) => {
+ const lang = req.params.lang || 'en';
+ const Wiki = WikiJs({
+   apiUrl: `https://${lang}.wikipedia.org/w/api.php`,
+   headers: { 'User-Agent': process.env.BOT_USER_AGENT}
+ });
  
- const page = await Wiki.page(id);
- const info = await page.info(property);
-	
- return res.status(200).json({ info });
-});
-
-router.get('/content/page/:id', async (req, res) => {
  try {
   const id = req.params.id;
+  
   const page = await Wiki.page(id);
   const content = await page.content();
   return res.status(200).json(content);
@@ -30,9 +23,16 @@ router.get('/content/page/:id', async (req, res) => {
  }
 });
 
-router.get('/rawImages/page/:id', async (req, res) => {
+router.get('/rawImages/page/:id/lang/:lang', async (req, res) => {
+ const lang = req.params.lang || 'en';
+ const Wiki = WikiJs({
+   apiUrl: `https://${lang}.wikipedia.org/w/api.php`,
+   headers: { 'User-Agent': process.env.BOT_USER_AGENT}
+ });
+ 
  try {
   const id = req.params.id;
+  
   const page = await Wiki.page(id);
   const content = await page.rawImages();
   return res.status(200).json(content);
@@ -43,9 +43,15 @@ router.get('/rawImages/page/:id', async (req, res) => {
  }
 });
 
-router.get('/summary/page/:id', async (req, res) => {
+router.get('/summary/page/:id/lang/:lang', async (req, res) => {
+ const lang = req.params.lang || 'en';
+ const Wiki = WikiJs({
+   apiUrl: `https://${lang}.wikipedia.org/w/api.php`,
+   headers: { 'User-Agent': process.env.BOT_USER_AGENT}
+ });
  try {
   const id = req.params.id;
+  
   const page = await Wiki.page(id);
   const content = await page.summary();
   return res.status(200).json(content);
@@ -56,9 +62,15 @@ router.get('/summary/page/:id', async (req, res) => {
  }
 });
 
-router.get('/langlinks/page/:id', async (req, res) => {
+router.get('/langlinks/page/:id/lang/:lang', async (req, res) => {
+ const lang = req.params.lang || 'en';
+ const Wiki = WikiJs({
+   apiUrl: `https://${lang}.wikipedia.org/w/api.php`,
+   headers: { 'User-Agent': process.env.BOT_USER_AGENT}
+ });
  try {
   const id = req.params.id;
+  
   const page = await Wiki.page(id);
   const content = await page.langlinks();
   return res.status(200).json(content);
@@ -68,9 +80,16 @@ router.get('/langlinks/page/:id', async (req, res) => {
   return res.status(500).json(e);
  }
 });
-router.get('/summary/page/:id', async (req, res) => {
+
+router.get('/summary/page/:id/lang/:lang', async (req, res) => {
+ const lang = req.params.lang || 'en';
+ const Wiki = WikiJs({
+   apiUrl: `https://${lang}.wikipedia.org/w/api.php`,
+   headers: { 'User-Agent': process.env.BOT_USER_AGENT}
+ });
  try {
   const id = req.params.id;
+  
   const page = await Wiki.page(id);
   const content = await page.summary();
   return res.status(200).json(content);
@@ -81,9 +100,15 @@ router.get('/summary/page/:id', async (req, res) => {
  }
 });
 
-router.get('/mainImage/page/:id', async (req, res) => {
+router.get('/mainImage/page/:id/lang/:lang', async (req, res) => {
+ const lang = req.params.lang || 'en';
+ const Wiki = WikiJs({
+   apiUrl: `https://${lang}.wikipedia.org/w/api.php`,
+   headers: { 'User-Agent': process.env.BOT_USER_AGENT}
+ });
  try {
   const id = req.params.id;
+  
   const page = await Wiki.page(id);
   const content = await page.mainImage();
   return res.status(200).json(content);
@@ -94,9 +119,15 @@ router.get('/mainImage/page/:id', async (req, res) => {
 });
 
 
-router.get('/fullInfo/page/:id', async (req, res) => {
+router.get('/fullInfo/page/:id/lang/:lang', async (req, res) => {
+ const lang = req.params.lang || 'en';
+ const Wiki = WikiJs({
+   apiUrl: `https://${lang}.wikipedia.org/w/api.php`,
+   headers: { 'User-Agent': process.env.BOT_USER_AGENT}
+ });
  try {
   const id = req.params.id;
+  
   const page = await Wiki.page(id);
   const content = await page.fullInfo();
   return res.status(200).json(content);
