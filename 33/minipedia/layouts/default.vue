@@ -63,10 +63,7 @@
         </li>
       </ul>
 
-      <input type="search" list="autocomplete" class="site-search" placeholder="🔍 Search minipedia">
-      <datalist id="autocomplete">
-        <!-- <option value=""></option> -->
-      </datalist>
+      <SearchBox />
     </header>
 
     <Nuxt />
