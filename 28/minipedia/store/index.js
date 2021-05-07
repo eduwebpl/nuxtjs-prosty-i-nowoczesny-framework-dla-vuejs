@@ -4,6 +4,7 @@ export const state = () => ({
  summary: null,
  rawImages: null,
  mainImage: null,
+ langlinks: null,
 })
 
 export const mutations = {
@@ -22,4 +23,7 @@ export const mutations = {
  setMainImage (state, text) {
    state.mainImage = text
  },
+ setLangLinks (state, text) {
+  state.langlinks = text
+ }
 } 

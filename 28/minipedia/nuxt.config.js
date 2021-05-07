@@ -69,7 +69,7 @@ module.exports = {
     ],
     lazy: true,
     langDir: 'lang/',
-    defaultLocale: 'en'
+    fallbackLocale: 'en',
  },
   basic: {
     name: process.env.USERNAME,

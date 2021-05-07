@@ -4,7 +4,7 @@
       {{ $route.params.id }}
     </h1>
  
-    <span class="notice">From Wikipedia, the free encyclopedia</span>
+    <span class="notice"> {{ $t('Disclaimer') }} </span>
     
     <FullInfoBox :content="$store.state.fullInfo.general" />
     

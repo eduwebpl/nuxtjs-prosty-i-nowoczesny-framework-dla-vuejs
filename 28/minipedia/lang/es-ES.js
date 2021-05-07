@@ -29,4 +29,5 @@ export default {
  'Languages': 'Idiomas',
  'Register': 'Registrarse',
  'Login': 'Acceso',
+ 'Disclaimer': 'De Wikipedia, la enciclopedia libre'
 }
