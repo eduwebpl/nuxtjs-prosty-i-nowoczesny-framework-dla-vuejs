@@ -13,7 +13,14 @@
      return {
       mostViewed: await $axios.$get(`/api/wiki/mostViewed/lang/${i18n.locale}`),
      };
-    }
+    },
+    jsonld() {
+      return {
+        '@context': 'http://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [],
+      };
+    },
   }
 </script>
 
