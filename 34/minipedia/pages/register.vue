@@ -1,13 +1,12 @@
 <template>
   <article class="content">
       <h2>
-      Random page
+       {{ $t('Register') }}
       </h2>
   </article>
 </template>
 
 <script>
 export default {
- middleware: 'random',
 }
 </script>

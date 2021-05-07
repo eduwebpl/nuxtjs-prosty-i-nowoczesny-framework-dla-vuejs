@@ -1,7 +1,7 @@
 <template>
   <article class="content">
       <h2>
-      Login 
+       {{ $t('Login') }}
       </h2>
   </article>
 </template>

@@ -7,12 +7,11 @@
           <img
             :src="mainImage" alt="Main image for the query">
           <figcaption>
-            Main image representing 
+            Main image representing {{ $route.params.id }}
           </figcaption>
         </figure>
       </td>
     </tr>
-
 
     <tr v-for="detail in textDetails">
       <td>{{ convertToStartCase(detail[0]) }} </td>

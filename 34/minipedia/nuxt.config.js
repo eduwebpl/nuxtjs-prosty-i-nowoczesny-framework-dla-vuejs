@@ -44,13 +44,24 @@ module.exports = {
   buildModules: [
    '~/modules/envalid.js'
   ],
-
+  sitemap: {
+   hostname: 'http://localhost:8000',
+   gzip: false,
+   exclude: [
+     '/secret',
+     '/admin/**'
+   ],
+   routes: [
+     '/wiki/Janusz%20Korczak'
+   ]
+ },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-basic-auth-module',
     'nuxt-i18n',
+    '@nuxtjs/sitemap'
   ],
   i18n: {
     locales: [
