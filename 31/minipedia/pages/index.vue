@@ -1,6 +1,6 @@
 <template>
   <article class="content">
-    <h1>Minipedia - {{ $t('welcome') }} </h1>
+    <h1>Minipedia - {{ $t('Welcome') }} </h1>
     
     <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
     <nuxt-link :to="switchLocalePath('fr')">Français</nuxt-link>

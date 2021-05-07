@@ -2,16 +2,18 @@
   <div class="wrapper">
     <nav class="side-navigation">
       <div class="logo">
-        <a href="/">
+        <nuxt-link :to="localePath('/')">
           <img src="/logo2.png" alt="">
           Minipedia
-        </a>
+        </nuxt-link>
       </div>
       <ul>
         <li><a href="#main-page"> {{ $t('MainPage') }} </a></li>
         <li><a href="#contents"> {{ $t('Contents') }} </a></li>
         <li><a href="#current-events"> {{ $t('CurrentEvents') }} </a></li>
-        <li><a href="#random-article"> {{ $t('RandomArticle') }} </a></li>
+        <li>
+         <nuxt-link :to="localePath('/random')"> {{ $t('RandomArticle') }}  </nuxt-link>
+         </li>
         <li><a href="#about-wikipedia"> {{ $t('AboutWikipedia') }} </a></li>
         <li><a href="#contact-us"> {{ $t('ContactUs') }} </a></li>
         <li><a href="#donate"> {{ $t('Donate') }} </a></li>
