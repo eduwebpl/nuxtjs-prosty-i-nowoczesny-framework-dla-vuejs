@@ -45,4 +45,23 @@ router.get('/random/lang/:lang/count/:count', async (req, res) => {
  }
 })
 
+router.get('/mostViewed/lang/:lang', async (req, res) => {
+ const lang = req.params.lang || 'en';
+ 
+ const Wiki = WikiJs({
+   apiUrl: `https://${lang}.wikipedia.org/w/api.php`,
+   headers: { 'User-Agent': process.env.BOT_USER_AGENT}
+ });
+ 
+ try {
+  const randomArticles = await Wiki.mostViewed();
+
+  return res.status(200).json(randomArticles);
+
+ } catch (e) {
+  console.error(e);
+  return res.status(500).json(e);
+ }
+})
+
 export default router;

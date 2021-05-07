@@ -68,8 +68,13 @@ module.exports = {
       }
     ],
     lazy: true,
-    langDir: 'lang/'
+    langDir: 'lang/',
+    defaultLocale: 'en',
  },
+ loading: {
+  color: 'blue',
+  height: '5px'
+},
   basic: {
     name: process.env.USERNAME,
     pass: process.env.PASSWORD,

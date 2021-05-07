@@ -1,17 +1,19 @@
 <template>
   <article class="content">
     <h1>Minipedia - {{ $t('Welcome') }} </h1>
-    
-    <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
-    <nuxt-link :to="switchLocalePath('fr')">Français</nuxt-link>
-    <nuxt-link :to="switchLocalePath('es')">Español</nuxt-link>
+    <MostViewed :mostViewed="mostViewed"></MostViewed>
   </article>
   </div>
 </template>
 
 <script>
   export default {
-    layout: 'default'
+    layout: 'default',
+    async asyncData({ $axios , app: { i18n }}) {
+     return {
+      mostViewed: await $axios.$get(`/api/wiki/mostViewed/lang/${i18n.locale}`),
+     };
+    }
   }
 </script>
 
