@@ -49,8 +49,28 @@ module.exports = {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'nuxt-basic-auth-module'
+    'nuxt-basic-auth-module',
+    'nuxt-i18n',
   ],
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        file: 'en-US.js'
+      },
+      {
+        code: 'es',
+        file: 'es-ES.js'
+      },
+      {
+        code: 'fr',
+        file: 'fr-FR.js'
+      }
+    ],
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'en'
+ },
   basic: {
     name: process.env.USERNAME,
     pass: process.env.PASSWORD,
