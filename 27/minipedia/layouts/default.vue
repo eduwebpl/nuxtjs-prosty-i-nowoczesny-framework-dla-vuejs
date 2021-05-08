@@ -8,42 +8,42 @@
         </a>
       </div>
       <ul>
-        <li><a href="#main-page">Main page</a></li>
-        <li><a href="#contents">Contents</a></li>
-        <li><a href="#current-events">Current events</a></li>
-        <li><a href="#random-article">Random article</a></li>
-        <li><a href="#about-wikipedia">About Wikipedia</a></li>
-        <li><a href="#contact-us">Contact us</a></li>
-        <li><a href="#donate">Donate</a></li>
+        <li><a href="#main-page"> {{ $t('MainPage') }} </a></li>
+        <li><a href="#contents"> {{ $t('Contents') }} </a></li>
+        <li><a href="#current-events"> {{ $t('CurrentEvents') }} </a></li>
+        <li><a href="#random-article"> {{ $t('RandomArticle') }} </a></li>
+        <li><a href="#about-wikipedia"> {{ $t('AboutWikipedia') }} </a></li>
+        <li><a href="#contact-us"> {{ $t('ContactUs') }} </a></li>
+        <li><a href="#donate"> {{ $t('Donate') }} </a></li>
       </ul>
-      <h3>Contribute</h3>
+      <h3> {{ $t('Contribute') }}</h3>
       <ul>
-        <li><a href="#help">Help</a></li>
-        <li><a href="#learn-to-edit">Learn to edit</a></li>
-        <li><a href="#community-portal">Community portal</a></li>
-        <li><a href="#recent-changes">Recent changes</a></li>
-        <li><a href="#upload-file">Upload file</a></li>
+        <li><a href="#help"> {{ $t('Help') }} </a></li>
+        <li><a href="#learn-to-edit"> {{ $t('LearnToEdit') }} </a></li>
+        <li><a href="#community-portal"> {{ $t('CommunityPortal') }} </a></li>
+        <li><a href="#recent-changes"> {{ $t('RecentChanges') }} </a></li>
+        <li><a href="#upload-file"> {{ $t('UploadFile') }} </a></li>
       </ul>
-      <h3>Tools</h3>
+      <h3>{{ $t('Tools') }} </h3>
       <ul>
-        <li><a href="#what-links-here">What links here</a></li>
-        <li><a href="#related-changes">Related changes</a></li>
-        <li><a href="#special-pages">Special pages</a></li>
-        <li><a href="#permanent-link">Permanent link</a></li>
-        <li><a href="#page-information">Page information</a></li>
-        <li><a href="#cite-this-page">Cite this page</a></li>
-        <li><a href="#wikidata-item">Wikidata item</a></li>
+        <li><a href="#what-links-here"> {{ $t('WhatLinksHere') }} </a></li>
+        <li><a href="#related-changes"> {{ $t('RelatedChanges') }} </a></li>
+        <li><a href="#special-pages"> {{ $t('SpecialPages') }} </a></li>
+        <li><a href="#permanent-link"> {{ $t('PermanentLink') }} </a></li>
+        <li><a href="#page-information"> {{ $t('PageInformation') }} </a></li>
+        <li><a href="#cite-this-page"> {{ $t('CiteThisPage') }} </a></li>
+        <li><a href="#wikidata-item"> {{ $t('WikidataItem') }} </a></li>
       </ul>
-      <h3>Print/export</h3>
+      <h3> {{ $t('PrintExport') }} </h3>
       <ul>
-        <li><a href="#download-as-pdf">Download as PDF</a></li>
-        <li><a href="#printable-version">Printable version</a></li>
+        <li><a href="#download-as-pdf"> {{ $t('DownloadAsPDF') }} </a></li>
+        <li><a href="#printable-version"> {{ $t('PrintableVersion') }}</a></li>
       </ul>
-      <h3>In other projects</h3>
+      <h3> {{ $t('InOtherProjects') }} </h3>
       <ul>
-        <li><a href="#wikimedia-commons">Wikimedia Commons</a></li>
+        <li><a href="#wikimedia-commons"> {{ $t('WikimediaCommons') }} </a></li>
       </ul>
-      <h3>Languages</h3>
+      <h3> {{ $t('Languages') }} </h3>
       <ul>
         <li><a href="#беларуская">беларуская</a></li>
         <li><a href="#čeština">čeština</a></li>
@@ -61,10 +61,10 @@
     <header class="banner">
       <ul>
         <li>
-          <NuxtLink to="/register">Register</NuxtLink>
+          <NuxtLink to="/register"> {{ $t('Register') }}</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/please-login">Login</NuxtLink>
+          <NuxtLink to="/please-login"> {{ $t('Login') }}</NuxtLink>
         </li>
       </ul>
 

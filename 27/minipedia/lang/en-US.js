@@ -1,32 +1,32 @@
 export default {
- welcome: 'Welcome'
- // 'Main page': 'Main page'
- // 'Contents': 'Contents'
- // 'Current events': 'Current events'
- // 'Random article': 'Random article'
- // 'About Wikipedia': 'About Wikipedia'
- // 'Contact us': 'Contact us'
- // 'Donate': 'Donate'
- // 'Contribute': 'Contribute'
- // 'Help': 'Help'
- // 'Learn to edit': 'Learn to edit'
- // 'Community portal': 'Community portal'
- // 'Recent changes': 'Recent changes'
- // 'Upload file': 'Upload file'
- // 'Tools': 'Tools'
- // 'What links here': 'What links here'
- // 'Related changes': 'Related changes'
- // 'Special pages': 'Special pages'
- // 'Permanent link': 'Permanent link'
- // 'Page information': 'Page information'
- // 'Cite this page': 'Cite this page'
- // 'Wikidata item': 'Wikidata item'
- // 'Print/export': 'Print/export'
- // 'Download as PDF': 'Download as PDF'
- // 'Printable version': 'Printable version'
- // 'In other projects': 'In other projects'
- // 'Wikimedia Commons': 'Wikimedia Commons'
- // 'Languages': 'Languages'
- // 'Register': 'Register'
- // 'Login': 'Login'
+ 'Welcome': 'Welcome',
+ 'MainPage': 'Main page',
+ 'Contents': 'Contents',
+ 'CurrentEvents': 'Current events',
+ 'RandomArticle': 'Random article',
+ 'AboutWikipedia': 'About Wikipedia',
+ 'ContactUs': 'Contact us',
+ 'Donate': 'Donate',
+ 'Contribute': 'Contribute',
+ 'Help': 'Help',
+ 'LearnToEdit': 'Learn to edit',
+ 'CommunityPortal': 'Community portal',
+ 'RecentChanges': 'Recent changes',
+ 'UploadFile': 'Upload file',
+ 'Tools': 'Tools',
+ 'WhatLinksHere': 'What links here',
+ 'RelatedChanges': 'Related changes' ,
+ 'SpecialPages': 'Special pages',
+ 'PermanentLink': 'Permanent link',
+ 'PageInformation': 'Page information',
+ 'CiteThisPage': 'Cite this page',
+ 'WikidataItem': 'Wikidata item',
+ 'PrintExport': 'Print/export',
+ 'DownloadAsPDF': 'Download as PDF',
+ 'PrintableVersion': 'Printable version',
+ 'InOtherProjects': 'In other projects',
+ 'WikimediaCommons': 'Wikimedia Commons',
+ 'Languages': 'Languages',
+ 'Register': 'Register',
+ 'Login': 'Login',
 }
